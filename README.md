@@ -48,9 +48,3 @@ cd backend/backend
 npm install
 npm run develop
 ```
-
-```bash
-git add README.md
-git commit -m "Add project README"
-git push
-```

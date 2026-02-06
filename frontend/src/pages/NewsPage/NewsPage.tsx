@@ -14,6 +14,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+const STRAPI_URL = import.meta.env.VITE_STRAPI_URL;
 
 function NewsPage() {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ function NewsPage() {
   const { data: sources } = useQuery({
     queryKey: ["sources"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:1337/api/sources");
+      const res = await fetch(`${STRAPI_URL}/api/sources`);
       const data = await res.json();
       return data.data;
     },
@@ -36,7 +37,7 @@ function NewsPage() {
   const { data: topics } = useQuery({
     queryKey: ["topics"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:1337/api/topics");
+      const res = await fetch(`${STRAPI_URL}/api/topics`);
       const data = await res.json();
       return data.data;
     },

@@ -1,0 +1,22 @@
+# Node
+node_modules
+npm-debug.log*
+
+# Vite
+.vite
+dist
+
+# Env
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# Strapi
+backend/backend/.tmp
+backend/backend/.cache
+backend/backend/build
+backend/backend/node_modules
+backend/backend/dist
+backend/backend/data.db
